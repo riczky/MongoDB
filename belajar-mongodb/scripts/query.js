@@ -1,0 +1,26 @@
+// select *  from customers where _id = 'khannedy'
+db.customers.find({
+    _id: "khannedy" 
+});
+
+// select * from customers where name = 'Eko Kurniawan Khannedy'
+db.customers.find({
+    name: "Eko Kurniawan Khannedy"
+});
+
+// dua Filter
+db.customers.find({
+    _id: "khannedy",
+    name: "Eko Kurniawan Khannedy" 
+});
+
+// select * from products where price = 2000
+db.products.find({
+    price: 2000
+});
+
+// embedded
+// select * from orders where items.product_id = 1
+db.orders.find({
+    "items.product_id": 1
+});
